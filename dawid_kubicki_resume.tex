@@ -1,0 +1,185 @@
+%-------------------------
+% Resume in Latex
+% Author : Dawid Kubicki
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://linkedin.com/in/dkubicki}{\Large Dawid Kubicki}} & Email : \href{mailto:login@gmail.com}{login@gmail.com}\\
+  \href{https://linkedin.com/in/dkubicki}{https://linkedin.com/in/dkubicki} & Mobile : +48-123-456-789 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Wroclaw Institute of Technologies}{Wroclaw, Poland}
+      {Master of Science in Computer Science}{Aug. 2010 -- Dec. 2012}
+    \resumeSubheading
+      {Wroclaw Institute of Technologies}{Wroclaw, Poland}
+      {Bachelor of Engineering in Electronics and Telecommunications}{Aug. 2007 -- July. 2010}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Allegro}{Warsaw, Poland}
+      {Software Engineer}{Apr 2019 - Present}
+      \resumeItemListStart
+        \resumeItem{CBS - GraphQL API Gateway}
+          {CBS is an internal platform for developers. Collect data from many microservices into one graph. Introduce security and audit layer. Worked on APIs, performance and security for better developer experience.}
+        \resumeItem{Fulfillment Order}
+          {Help order teams introduce fulfillment business requirements into order flow on platform.}
+      \resumeItemListEnd
+      
+   \resumeSubheading
+	 {Samsung Research and Development}{Warsaw, Poland}
+     {Software Engineer}{May 2017 - Apr 2019}
+     \resumeItemListStart
+   	   \resumeItem{Mobile Promotions}
+         {Service for promotion push and in-app notifications. Building a scheduling system to run marketing campaigns. Writing core services using Kotlin and Spring feeding mobile REST client.}
+       \resumeItem{Hotel and Client Management}
+         {Service for hotel and client management. Writing core services using Spring for WEB GraphQL client. Tackling security challenges with Sprign OAuth (custom implemenation of OAuth2 server). Integrating AWS services. Filtering access to data with Hibernate and other technologies.}
+       \resumeItem{Dev Platform}
+         {Microservices environment based on docker and AWS. Involved in fields such as pipelines as code with Jenkins, Ansible, Gradle to automated continuous integration, continuous delivery and setup infrastructure as code with Terraform.}
+       \resumeItem{Sound Recognition}
+         {Kotlin backend for web application used by the AI sound recognition team. Wrote WebSocket platform to show algorithm results.}
+ 	   \resumeItem{Analytics System}
+   		 {Service presents analytics used by the marketing team as a management tool. Wrote services using Google BigQuery.}
+ 	   \resumeItem{Game System}
+   		 {Service for game analytics used by game studio. Designing AWS architecture and data pipelines. Building data flow system feeding web consumer from BigData analytics.}
+ 	   \resumeItem{IoT System}
+         {Service for IoT management. Wrote a new future in Java backend and debugging daily issues.}
+    \resumeItemListEnd
+
+   \resumeSubheading
+     {IBM}{Warsaw, Poland}
+     {Software Engineer}{Dec 2014 - May 2017}
+     \resumeItemListStart
+       \resumeItem{IAM}
+         {Java and Javascript backend for a web application used by financial managers for identity and access management. Production environment based on WebSphere and Oracle Database.}
+       \resumeItem{ATTD}
+         {Java and Selenium backend for a web application used by quality testing department for business requirement support.}
+       \resumeItem{Workflows}
+         {Java and Javascript scripts for integration system used by the security department for incident management.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{GraphQL extended audit instrumentation}
+      {Open source java library for developers who develop GraphQL server and would like to introduce operation audit for security.}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: Java, Kotlin, Groovy}
+      \hfill
+    }
+	\item{
+	  \textbf{Technologies}{: Spring Boot, Kafka, NoSQL, SQL, GraphQL, REST, Infrastructure as Code with Terraform, Docker, Prometheus Monitoring}
+	  \hfill
+	}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
